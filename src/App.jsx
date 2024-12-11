@@ -25,7 +25,7 @@ function App() {
       
         <Routes>
           <Route path='/Home' element={<Home data2={data}/>} />
-          <Route path='/CreactBlog' element={<CreactBlog />} />
+          <Route path='/CreactBlog' element={<CreactBlog setData={setData} data={data}/>} />
 
           <Route path='/*' element={<Navigate to='/Home'/>} />
         </Routes>

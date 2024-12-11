@@ -1,6 +1,5 @@
-import React, { useState } from 'react'
-import { useLocation } from 'react-router-dom'
-
+import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 // const Home = ({data2}) => {
 // console.log("data2 :::",data2);
@@ -18,7 +17,7 @@ import { useLocation } from 'react-router-dom'
 //        let storeData = [...data, initial]
 //         setData(storeData )
 //         setInitial("")
-        
+
 //     }
 //     const deleteTask= (index) => {
 //         console.log(index)
@@ -29,28 +28,46 @@ import { useLocation } from 'react-router-dom'
 //         setData(filerData)
 //     }
 
+const Home = ({ data2 }) => {
+  // const location = useLocation();
+  // console.log(location.state)
+  return (
+    <>
+      <div>
+        <table>
+          <thead>
+            <th>Sr. No.</th>
+            <th>Title</th>
+            <th>description</th>
+            <th>author</th>
+            <th>country</th>
+            <th>state</th>
+            <th>city</th>
+            <th>text</th>
+          </thead>
+          {data2?.map((data, index) => (
+            <tbody>
+              <td>{++index}.</td>
+              <td>{data?.title}</td>
+              <td>{data?.description}</td>
+              <td>{data?.author}</td>
+              <td>{data?.country}</td>
+              <td>{data?.state}</td>
+              <td>{data?.city}</td>
+              <td>{data?.text}</td>
+            </tbody>
+          ))}
+        </table>
+      </div>
+    </>
+  );
+};
 
-
-    
-    const Home = () => {
-        // const location = useLocation(); 
-        // console.log(location.state)
-      return (
-        <>
-        
-        <div><h2>hi this is </h2></div>
-        
-        </>
-      )
-    }
-    
-    export default Home
+export default Home;
 
 //   return (
-    
-//     <>
 
-        
+//     <>
 
 //         <div className="container">
 //             <div className="inputTask">
@@ -69,52 +86,8 @@ import { useLocation } from 'react-router-dom'
 //             })}
 //         </div>
 
-
-
 //     </>
 //   )
 // }
 
 // export default Home
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
